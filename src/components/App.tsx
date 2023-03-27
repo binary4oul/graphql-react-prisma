@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import '../styles/App.css';
 
 import LinkList from './LinkList'
+import CreateLink from './CreateLink';
 
 // function App() {
 //   return (
@@ -26,7 +27,12 @@ import LinkList from './LinkList'
 // }
 
 function App() {
-  return <LinkList />
+  return (
+    <>
+      <LinkList />
+      <CreateLink />
+    </>
+  )
 }
 
 export default App;
