@@ -4,7 +4,7 @@ import logo from '../logo.svg';
 
 import LinkList from './LinkList'
 import CreateLink from './CreateLink';
-
+import Login from './Login'
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 
@@ -19,6 +19,7 @@ function App() {
             path="/create"
             element={<CreateLink/>}
           />
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
     </>
