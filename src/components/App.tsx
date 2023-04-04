@@ -7,6 +7,7 @@ import CreateLink from './CreateLink';
 import Login from './Login'
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
+import Search from './Search'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             element={<CreateLink/>}
           />
           <Route path="/login" element={<Login/>} />
+          <Route path="/search"element={<Search/>}/>
         </Routes>
       </div>
     </>
