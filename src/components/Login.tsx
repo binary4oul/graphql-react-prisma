@@ -54,13 +54,13 @@ const Login = () => {
     }
   });
 
-  
+  const loggedIn = formState.login
 
   return (
-    <div>
-      <h4 className="mv3">{formState.login ? "Login" : "Sign Up"}</h4>
+    <>
+      <h4 className="mv3">{loggedIn ? "Login" : "Sign Up"}</h4>
       <div className="flex flex-column">
-        {!formState.login && (
+        {!loggedIn && (
           <input
             value={formState.name}
             onChange={(e) =>
@@ -99,25 +99,25 @@ const Login = () => {
       <div className="flex mt3">
         <button
           className="pointer mr2 button"
-          onClick={ () => formState.login ? login : signup}
+          onClick={ () => loggedIn ? login() : signup()}
         >
-          {formState.login ? "login" : "create account"}
+          {loggedIn ? "login" : "create account"}
         </button>
         <button
           className="pointer button"
           onClick={(e) =>
             setFormState({
               ...formState,
-              login: !formState.login,
+              login: !loggedIn,
             })
           }
         >
-          {formState.login
+          {loggedIn
             ? "need to create an account?"
             : "already have an account?"}
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
